@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="widht=device-width, initial-scale=1.0">
+
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<title> Calculo DNI</title>
+
+</head>
+
+<body>
+	<form id="f" style="text-align: center; font-size: 30px;" name="f" action="javascript:calcula()";>
+        <label for="dniNumero">Numero DNI:</label>
+        <input type="text" style="width: 200px; height: 40px; font-size: 15px;" id="dniNumero" name="dniNumero">
+        <br>
+        <label for="dniLetra">Letra:</label>
+        <input type="text" style="width: 200px; height: 40px; font-size: 15px;" id="dniLetra" name="dniLetra">
+        <br>
+        <input id="submit" name="submit" type="submit"  value="Calcular Letra DNI" title="Calcular Letra DNI" accesskey="n">
+
+			<br /><br>
+		<input id="txt" style="font-size: 15px; width: 1000px; text-align: center; background-color: white; border-width: 0px; "type="text" name="txt" title=" DNI" readonly="">
+
+    </form>
+
+
+
+	<script type="text/javascript">
+		document.getElementById('txt').style.backgroundColor = 'white';
+
+
+		function calcula() {
+			console.log("entra en if")
+
+			dniNumero = document.getElementById('dniNumero').value;
+
+			dniLetra = document.getElementById('dniLetra').value;
+
+
+			if (dniNumero.length == 0) {
+
+				alert("El numero no puede estar vacio.");
+
+			}else if (dniNumero.length >8){
+				alert("Maximo 8 caracteres.")
+			
+			}else if (isNaN(dniNumero)) {
+
+				alert("El numero no lleva caracteres de letra o simbolo.");
+
+
+
+			} else if (dniLetra.length == 0) {
+
+				alert("La letra no puede estar vacia.");
+			
+			}else if (dniLetra.length >1){
+
+				alert("Una letra por DNI")
+			
+			}else if (!isNaN(dniLetra)) {
+
+				alert("La letra no puede ser un numero.");
+
+
+			} else {
+				console.log("entra en else")
+
+				var resultado = document.getElementById('txt');
+				var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H',
+					'L', 'C', 'K', 'E', 'T'
+				];
+				var letraGenerada = letras[dniNumero % 23];
+
+				if (dniLetra.toUpperCase() == letraGenerada) {
+					
+
+					var resultadoDni = "El DNI " + dniNumero + letraGenerada + " es correcto";
+					resultado.value = resultadoDni;
+					resultado.style.color = "green";
+					resultado.style.fontSize = "2em";
+					
+					
+					console.log("entra en else")
+				} else {
+					var resultadoDni = "La letra " + dniLetra + " no es correcta";
+					resultado.value = resultadoDni;
+					resultado.style.color = "Red";
+					resultado.style.fontSize = "2em"
+					
+				}
+				
+			}
+
+		}
+	</script>
+
+</body>
+
+</html>
