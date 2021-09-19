@@ -1,0 +1,79 @@
+{
+    "gimnasios":[
+        {
+            "nombre":"PonteFuerte Alcalá",
+            "direccion":"C/Mayor, 55, 28806 Alcalá de Henares",
+            "superficie":"350m2",
+            "aforo":"150 personas",
+            "maquinas":true,
+            "clasesColectivas":"Pilates, Boxeo, Spinning",
+            "servicios":"sauna, piscina"
+        },
+        {
+            
+            "nombre":"PonteFuerte Hortaleza",
+            "superficie":"230m2",
+            "aforo":"100 personas",
+            "maquinas":true,
+            "clasesColectivas":"Yoga, Step, HIIT",
+            "servicios":"Parking, nutricion"
+        },
+        {
+            
+            "nombre":"PonteFuerte Vallecas",
+            "direccion":"Via Lusitana, 89, 28840 Madrid",
+            "superficie":"400m2",
+            "aforo":"200 personas",
+            "maquinas":true,
+            "clasesColectivas":"AeroYoga, Boxeo, Defensa Personal",
+            "servicios":"sauna, piscina, parking, nutricion"
+        }],
+        "clientes":[
+            {
+                "nombre": "Alberto Perez",
+                "direccion": "Av. de la Alcarria, 120, 28806 Alcalá de H.",
+                "dni": "09047815W",
+                "telefono": "666025477",
+                "habitos": [
+                    {
+                        "gimnasioPreferencia": "PonteFuerte Alcalá",
+                        "entradaSalida": "17:00/18:30",
+                        "diasAcude": "L,X,V",
+                        "actividadRealiza":"Boxeo, maquinas"
+                    }
+                ]
+            },
+            {
+                "nombre": "Paula Garcia",
+                "direccion": "Grn Via, 55, 28840 Madrid",
+                "dni": "00960799P",
+                "telefono": "626086977",
+                "habitos": [
+                    {
+                        "gimnasioPreferencia": "PonteFuerte Hortaleza",
+                        "entradaSalida": "08:00/10:00",
+                        "diasAcude": "M,X,V",
+                        "actividadRealiza":"Yoga, nutricion"
+                    }
+                ] 
+            },
+            {
+                "nombre": "Oscar Garrido",
+                "direccion": "Av. Principal, 89, 28840 Madrid",
+                "dni": "53562247D",
+                "telefono": "667979285",
+                "habitos": [
+                    {
+                        "gimnasioPreferencia": "PonteFuerte Vallecas",
+                        "entradaSalida": "20:00/21:30",
+                        "diasAcude": "L,M,X,J,V",
+                        "actividadRealiza":"defensa personal, sauna, piscina"
+                    }
+                ]    
+            }
+        ]
+        
+        
+    }
+
+
